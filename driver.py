@@ -1,7 +1,7 @@
 import requests
 import re
 
-if __name__ == '__main__':
+def getTotalOpenSeats():
     dept = input("Enter code for the department offering the class (ex: MATH, CMSC): ")
     number = input("Enter the class number (ex: 216, 101): ")
     class_name = dept + number
@@ -20,3 +20,5 @@ if __name__ == '__main__':
     openSeats = [int(s.replace('<', '')) for s in openSeats]
     print(sum(openSeats))
 
+if __name__ == '__main__':
+    getTotalOpenSeats()
